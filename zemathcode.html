@@ -1,0 +1,2153 @@
+﻿
+
+<html>
+<head>
+<style>
+#text1{
+   text-align:left;
+   width:90%;
+
+}
+#text2{
+   text-align:left;
+   width:90%;
+ }
+
+button{
+
+ width:25%;
+ height:80%;
+
+}
+
+body  {
+   background-image: url("paper1.png");
+   background-repeat: repeat-n;
+
+}
+
+</style>
+
+
+
+<script>
+function event1(x){
+   document.getElementById("text1").value+=x;
+}
+
+
+
+function operation()
+{
+
+  if( document.getElementById("radioMnozenie").checked === true)
+  {
+    if( document.getElementById("radio2").checked === true)
+    {multiplication2();}
+    if( document.getElementById("radio3").checked === true)
+    {multiplication3();}
+    if( document.getElementById("radio4").checked === true)
+    {multiplication4();}
+    if( document.getElementById("radio5").checked === true)
+     {multiplication5();}
+    if( document.getElementById("radio6").checked === true)
+      {multiplication6();}
+    if( document.getElementById("radio7").checked === true)
+       {multiplication7();}
+    if( document.getElementById("radio8").checked === true)
+          {multiplication8();}
+   }
+
+   if( document.getElementById("radioDzielenie").checked === true)
+   {
+
+      if( document.getElementById("radio6").checked === true)
+        {division6();}
+      if( document.getElementById("radio3").checked === true)
+          {division3();}
+
+      if( document.getElementById("radio4").checked === true)
+         {division4();}
+   }
+
+
+  if( document.getElementById("radioOdejmowanie").checked === true)
+  {
+    substraction();
+  }
+
+}
+
+function substraction(){
+var valuex = document.getElementById("text1").value.toLowerCase();
+   var    length = valuex.length;
+   var result ="";
+
+     for (i = 0; i < length; i++)
+     {
+        switch (valuex[i]) {
+           case " ":
+             result= result + "  ===  ";
+             break;
+
+           case "a":
+             result= result + " 5-4";
+             break;
+
+           case "ą":
+             result= result + " 5-3";
+             break;
+
+           case "b":
+             result= result + " 7-4";
+             break;
+           case "c":
+             result= result + " 8-4";
+             break;
+           case "ć":
+             result= result + " 7-2";
+             break;
+           case "d":
+             result= result + " 9-3";
+             break;
+           case "e":
+             result= result + " 10-3";
+             break;
+           case "ę":
+             result= result + " 12-4";
+             break;
+           case "f":
+             result= result + " 11-2";
+             break;
+           case "g":
+             result= result + " 12-2";
+             break;
+           case "h":
+             result= result + " 15-4";
+             break;
+           case "i":
+             result= result + " 16-4";
+             break;
+           case "j":
+             result= result + " 16-3";
+             break;
+           case "k":
+             result= result + " 20-6";
+             break;
+           case "l":
+             result= result + " 20-5";
+             break;
+           case "ł":
+             result= result + " 18-2";
+             break;
+           case "m":
+             result= result + " 22-5";
+             break;
+           case "n":
+             result= result + " 20-2";
+             break;
+           case "ń":
+             result= result + " 23-4";
+             break;
+           case "o":
+             result= result + " 25-5";
+             break;
+           case "ó":
+             result= result + " 25-4";
+             break;
+           case "p":
+             result= result + " 26-4";
+             break;
+           case "q":
+             result= result + " 28-5";
+             break;
+           case "r":
+             result= result + " 30-6";
+             break;
+           case "s":
+             result= result + " 30-5";
+             break;
+           case "ś":
+             result= result + " 28-2";
+             break;
+           case "t":
+             result= result + " 30-3";
+             break;
+           case "u":
+             result= result + " 33-5";
+             break;
+           case "v":
+             result= result + " 31-2";
+             break;
+           case "w":
+             result= result + " 31-1";
+             break;
+           case "x":
+             result= result + " 35-4";
+             break;
+           case "y":
+             result= result + " 37-5";
+             break;
+           case "z":
+             result= result + " 35-2";
+             break;
+           case "ź":
+             result= result + " 36-2 ";
+             break;
+           case "ż	":
+             result= result + " 37-2 ";
+             break;
+         }
+
+       }
+    document.getElementById("text2").value = result;
+}
+
+/*-------------------------   multiplication2 ------------------- */
+function multiplication2(){
+		var valuex = document.getElementById("text1").value;
+		//document.getElementById("text1").value = eval(x);
+
+        var    length = valuex.length;
+        var result ="";
+
+
+            for (i = 0; i < length; i++)
+            {
+
+                switch (valuex[i]) {
+                  case " ":
+                    result= result + "  ===  ";
+                    break;
+
+                    case "a":
+                      result= result + " 2x2-3";
+                    break;
+
+                    case "ą":
+                    result= result + " 2x2-2";  //" 2x2-3";
+                    break;
+
+                    case "b":
+                    result= result + " 2x2-1";
+                    break;
+
+                    case "c":
+                    result= result + " 2x2";
+                     break;
+
+                    case "ć":
+                    result= result + " 2x3-1";
+                    break;
+
+                    case "d":
+                     result= result + " 2x3";
+                     break;
+
+                     case "e":
+                     result= result + " 2x3+1";  //" 2x2-3";
+                    break;
+
+                   case "ę":
+                   result= result + " 2x4";
+                       break;
+
+                       case "f":
+                       result= result + " 2x4+1";
+                           break;
+
+                   case "g":
+                   result= result + " 2x5";
+                   break;
+
+
+                  case "h":
+                  result= result + " 2x6-1";
+                  break;
+
+                  case "i":
+                result= result + " 2x6";
+                  break;
+
+                  case "j":
+                  result= result + " 2x6+1";
+                  break;
+
+                  case "k":
+                  result= result + " 2x7";
+                  break;
+
+                  case "l":
+                    result= result + " 2x7+1";
+                  break;
+
+                  case "ł":
+                    result= result + " 2x8";
+                  break;
+
+
+                  case "m":
+                  result= result + " 2x8+1";
+                  break;
+
+                  case "n":
+                  result= result + " 2x9";
+                  break;
+
+                  case "ń":
+                  result= result + " 2x9+1";
+                  break;
+
+                  case "o":
+                result= result + " 2x10";
+                  break;
+
+                case "ó":
+                 result= result + " 2x10+1";
+                break;
+
+                case "p":
+                result= result + " 2x10+2";
+                break;
+
+                case "q":
+                result= result + " 2x10+3";
+                break;
+
+                case "r":
+                result= result + " 2x2+20";
+                break;
+
+                case "s":
+                result= result + " 2x2+21";
+                break;
+
+                case "ś":
+                result= result + " 2x3+20";
+                break;
+
+                case "t":
+                result= result + " 2x3+21";
+                break;
+
+                case "u":
+                result= result + " 2x4+20";
+                break;
+
+
+                case "v":
+                result= result + " 2x4+21";
+                break;
+
+                case "w":
+                result= result + " 2x5+20";
+                break;
+
+
+                case "x":
+                result= result + " 2x5+21";
+                break;
+
+                case "y":
+                result= result + " 2x6+20";
+                break;
+
+
+                case "z":
+                result= result + " 2x6+21";
+                break;
+
+                case "ź":
+                result= result + " 2x7+20";
+                break;
+
+                case "ż":
+                result= result + " 2x7+21";
+                break;
+
+                     default:
+
+                }
+
+
+             }
+
+            document.getElementById("text2").value = result;
+}
+
+/*--------------------------   3------------------------------- */
+function multiplication3(){
+		var valuex = document.getElementById("text1").value;
+		//document.getElementById("text1").value = eval(x);
+
+        var    length = valuex.length;
+        var result ="";
+
+
+            for (i = 0; i < length; i++)
+            {
+
+                switch (valuex[i]) {
+                  case " ":
+                    result= result + "  ===  ";
+                    break;
+
+                    case "a":
+                      result= result + " 3x2-5";
+                    break;
+
+                    case "ą":
+                    result= result + " 3x2-4";  //" 2x2-3";
+                    break;
+
+                    case "b":
+                    result= result + " 3x2-3";
+                    break;
+
+                    case "c":
+                    result= result + " 3x4-8";
+                     break;
+
+                    case "ć":
+                    result= result + " 3x4-7";
+                    break;
+
+                    case "d":
+                     result= result + " 3x4-6";
+                     break;
+
+                     case "e":
+                     result= result + " 3x4-5";  //" 2x2-3";
+                    break;
+
+                   case "ę":
+                   result= result + " 3x4-4";
+                       break;
+
+                       case "f":
+                       result= result + " 3x5-6";
+                           break;
+
+                   case "g":
+                   result= result + " 3x5-5";
+                   break;
+
+
+                  case "h":
+                  result= result + " 3x5-4";
+                  break;
+
+                  case "i":
+                result= result + " 3x5-3";
+                  break;
+
+                  case "j":
+                  result= result + " 3x5-2";
+                  break;
+
+                  case "k":
+                  result= result + " 3x6-4";
+                  break;
+
+                  case "l":
+                    result= result + " 3x6-3";
+                  break;
+
+                  case "ł":
+                    result= result + " 3x6-2";
+                  break;
+
+
+                  case "m":
+                  result= result + " 3x7-4";
+                  break;
+
+                  case "n":
+                  result= result + " 3x7-3";
+                  break;
+
+                  case "ń":
+                  result= result + " 3x7-2";
+                  break;
+
+                  case "o":
+                result= result + " 3x7-1";
+                  break;
+
+                case "ó":
+                 result= result + " 3x7";
+                break;
+
+                case "p":
+                result= result + " 3x8-2";
+                break;
+
+                case "q":
+                result= result + " 3x8-1";
+                break;
+
+                case "r":
+                result= result + " 3x8";
+                break;
+
+                case "s":
+                result= result + " 3x8+1";
+                break;
+
+                case "ś":
+                result= result + " 3x8+2";
+                break;
+
+                case "t":
+                result= result + " 3x9";
+                break;
+
+                case "u":
+                result= result + " 3x9+1";
+                break;
+
+
+                case "v":
+                result= result + " 3x9+2";
+                break;
+
+                case "w":
+                result= result + " 3x9+3";
+                break;
+
+
+                case "x":
+                result= result + " 3x9+4";
+                break;
+
+                case "y":
+                result= result + " 3x9+5";
+                break;
+
+
+                case "z":
+                result= result + " 3x9+6";
+                break;
+
+                case "ź":
+                result= result + " 3x9+7";
+                break;
+
+                case "ż":
+                result= result + " 3x9+8";
+                break;
+
+                     default:
+
+                }
+
+
+             }
+
+            document.getElementById("text2").value = result;
+}
+
+
+
+function multiplication4(){
+		var valuex = document.getElementById("text1").value;
+		//document.getElementById("text1").value = eval(x);
+
+        var    length = valuex.length;
+        var result ="";
+
+
+            for (i = 0; i < length; i++)
+            {
+
+                switch (valuex[i]) {
+                  case " ":
+                    result= result + "  ===  ";
+                    break;
+
+                    case "a":
+                      result= result + " 4x2-7";
+                    break;
+
+                    case "ą":
+                    result= result + " 4x2-6";  //" 2x2-3";
+                    break;
+
+                    case "b":
+                    result= result + " 4x2-5";
+                    break;
+
+                    case "c":
+                    result= result + " 4x3-8";
+                     break;
+
+                    case "ć":
+                    result= result + " 4x3-7";
+                    break;
+
+                    case "d":
+                     result= result + " 4x3-6";
+                     break;
+
+                     case "e":
+                     result= result + " 4x3-5";  //" 2x2-3";
+                    break;
+
+                   case "ę":
+                   result= result + " 4x3-4";
+                       break;
+
+                       case "f":
+                       result= result + " 4x4-7";
+                           break;
+
+                   case "g":
+                   result= result + " 4x4-6";
+                   break;
+
+
+                  case "h":
+                  result= result + " 4x4-5";
+                  break;
+
+                  case "i":
+                result= result + " 4x4-4";
+                  break;
+
+                  case "j":
+                  result= result + " 4x4-3";
+                  break;
+
+                  case "k":
+                  result= result + " 4x5-6";
+                  break;
+
+                  case "l":
+                    result= result + " 4x5-5";
+                  break;
+
+                  case "ł":
+                    result= result + " 4x5-4";
+                  break;
+
+
+                  case "m":
+                  result= result + " 4x5-3";
+                  break;
+
+                  case "n":
+                  result= result + " 4x6-6";
+                  break;
+
+                  case "ń":
+                  result= result + " 4x6-5";
+                  break;
+
+                  case "o":
+                result= result + " 4x6-4";
+                  break;
+
+                case "ó":
+                 result= result + " 4x6-3";
+                break;
+
+                case "p":
+                result= result + " 4x6-2";
+                break;
+
+                case "q":
+                result= result + " 4x6-1";
+                break;
+
+                case "r":
+                result= result + " 4x6";
+                break;
+
+                case "s":
+                result= result + " 4x7-3";
+                break;
+
+                case "ś":
+                result= result + " 4x7-2";
+                break;
+
+                case "t":
+                result= result + " 4x7-1";
+                break;
+
+                case "u":
+                result= result + " 4x7";
+                break;
+
+
+                case "v":
+                result= result + " 4x8-3";
+                break;
+
+                case "w":
+                result= result + " 4x8-2";
+                break;
+
+
+                case "x":
+                result= result + " 4x8-1";
+                break;
+
+                case "y":
+                result= result + " 4x8";
+                break;
+
+
+                case "z":
+                result= result + " 4x9-3";
+                break;
+
+                case "ź":
+                result= result + " 4x9-2";
+                break;
+
+                case "ż":
+                result= result + " 4x9-1";
+                break;
+
+                     default:
+
+                }
+
+
+             }
+
+            document.getElementById("text2").value = result;
+}
+
+
+
+function multiplication5(){
+		var valuex = document.getElementById("text1").value;
+		//document.getElementById("text1").value = eval(x);
+
+        var    length = valuex.length;
+        var result ="";
+
+
+            for (i = 0; i < length; i++)
+            {
+
+                switch (valuex[i]) {
+                  case " ":
+                    result= result + "  ===  ";
+                    break;
+
+                    case "a":
+                      result= result + " 5x2-9";
+                    break;
+
+                    case "ą":
+                    result= result + " 5x2-8";  //" 2x2-3";
+                    break;
+
+                    case "b":
+                    result= result + " 5x2-7";
+                    break;
+
+                    case "c":
+                    result= result + " 5x2-6";
+                     break;
+
+                    case "ć":
+                    result= result + " 5x3-10";
+                    break;
+
+                    case "d":
+                     result= result + " 5x3-9";
+                     break;
+
+                     case "e":
+                     result= result + " 5x3-8";  //" 2x2-3";
+                    break;
+
+                   case "ę":
+                   result= result + " 5x3-7";
+                       break;
+
+                       case "f":
+                       result= result + " 5x3-6";
+                           break;
+
+                   case "g":
+                   result= result + " 5x4-10";
+                   break;
+
+
+                  case "h":
+                  result= result + " 5x4-9";
+                  break;
+
+                  case "i":
+                result= result + " 5x4-8";
+                  break;
+
+                  case "j":
+                  result= result + " 5x4-7";
+                  break;
+
+                  case "k":
+                  result= result + " 5x4-6";
+                  break;
+
+                  case "l":
+                    result= result + " 5x4-5";
+                  break;
+
+                  case "ł":
+                    result= result + " 5x5-9";
+                  break;
+
+
+                  case "m":
+                  result= result + " 5x5-8";
+                  break;
+
+
+                  case "n":
+                  result= result + " 5x5-7";
+                  break;
+
+
+                  case "ń":
+                  result= result + " 5x5-6";
+                  break;
+
+                  case "o":
+                result= result + " 5x6-10";
+                  break;
+
+
+                case "ó":
+                 result= result + " 5x6-9";
+                break;
+
+                case "p":
+                result= result + " 5x6-8";
+                break;
+
+                case "q":
+                result= result + " 5x7-12";
+                break;
+
+
+                case "r":
+                result= result + " 5x7-11";
+                break;
+
+
+                case "s":
+                result= result + " 5x7-10";
+                break;
+
+                case "ś":
+                result= result + " 5x8-14";
+                break;
+
+
+                case "t":
+                result= result + " 5x8-13";
+                break;
+
+                case "u":
+                result= result + " 5x8-12";
+                break;
+
+
+                case "v":
+                result= result + " 5x8-11";
+                break;
+
+                case "w":
+                result= result + " 5x8-10";
+                break;
+
+
+                case "x":
+                result= result + " 5x9-14";
+                break;
+
+                case "y":
+                result= result + " 5x9-13";
+                break;
+
+
+                case "z":
+                result= result + " 5x9-12";
+                break;
+
+                case "ź":
+                result= result + " 5x9-11";
+                break;
+
+                case "ż":
+                result= result + " 5x9-19";
+                break;
+
+                     default:
+
+                }
+
+
+             }
+
+            document.getElementById("text2").value = result;
+}
+
+function multiplication6(){
+		var valuex = document.getElementById("text1").value;
+		//document.getElementById("text1").value = eval(x);
+
+        var    length = valuex.length;
+        var result ="";
+
+
+            for (i = 0; i < length; i++)
+            {
+
+                switch (valuex[i]) {
+                  case " ":
+                    result= result + "  ===  ";
+                    break;
+
+                    case "a":
+                      result= result + " 6x2-11";
+                    break;
+
+                    case "ą":
+                    result= result + " 6x2-10";  //" 2x2-3";
+                    break;
+
+                    case "b":
+                    result= result + " 6x2-9";
+                    break;
+
+                    case "c":
+                    result= result + " 6x2-8";
+                     break;
+
+                    case "ć":
+                    result= result + " 6x2-7";
+                    break;
+
+                    case "d":
+                     result= result + " 6x3-12";
+                     break;
+
+                     case "e":
+                     result= result + " 6x3-11";  //" 2x2-3";
+                    break;
+
+                   case "ę":
+                   result= result + " 6x3-10";
+                       break;
+
+                       case "f":
+                       result= result + " 6x3-9";
+                           break;
+
+                   case "g":
+                   result= result + " 6x3-8";
+                   break;
+
+
+                  case "h":
+                  result= result + " 6x3-7";
+                  break;
+
+                  case "i":
+                result= result + " 6x3-6";
+                  break;
+
+                  case "j":
+                  result= result + " 6x3-5";
+                  break;
+
+                  case "k":
+                  result= result + " 6x3-4";
+                  break;
+
+                  case "l":
+                    result= result + " 6x3-3";
+                  break;
+
+                  case "ł":
+                    result= result + " 6x3-2";
+                  break;
+
+
+                  case "m":
+                  result= result + " 6x3-1";
+                  break;
+
+
+                  case "n":
+                  result= result + " 6x3";
+                  break;
+
+
+                  case "ń":
+                  result= result + " 6x3+1";
+                  break;
+
+                  case "o":
+                result= result + " 6x3+2";
+                  break;
+
+
+                case "ó":
+                 result= result + " 6x3+3";
+                break;
+
+                case "p":
+                result= result + " 6x3+4";
+                break;
+
+                case "q":
+                result= result + " 6x3+5";
+                break;
+
+
+                case "r":
+                result= result + " 6x4";
+                break;
+
+
+                case "s":
+                result= result + " 6x4+1";
+                break;
+
+                case "ś":
+                result= result + " 6x4+2";
+                break;
+
+
+                case "t":
+                result= result + " 6x4+3";
+                break;
+
+                case "u":
+                result= result + " 6x5-2";
+                break;
+
+
+                case "v":
+                result= result + " 6x6-7";
+                break;
+
+                case "w":
+                result= result + " 6x7-12";
+                break;
+
+
+                case "x":
+                result= result + " 6x7-11";
+                break;
+
+                case "y":
+                result= result + " 6x7-10";
+                break;
+
+
+                case "z":
+                result= result + " 6x7-9";
+                break;
+
+                case "ź":
+                result= result + " 6x7-8";
+                break;
+
+                case "ż":
+                result= result + " 6x7-7";
+                break;
+
+                     default:
+
+                }
+
+
+             }
+
+            document.getElementById("text2").value = result;
+}
+
+/* ---------------- division4 ---------------------------- */
+function division4(){
+		var valuex = document.getElementById("text1").value;
+		//document.getElementById("text1").value = eval(x);
+
+        var    length = valuex.length;
+        var result ="";
+
+
+            for (i = 0; i < length; i++)
+            {
+
+                switch (valuex[i]) {
+                  case " ":
+                    result= result + "  ===  ";
+                    break;
+
+                    case "a":
+                      result= result + " 4:4";
+                    break;
+
+                    case "ą":
+                    result= result + " 8:4";  //" 2x2-3";
+                    break;
+
+                    case "b":
+                    result= result + " 12:4";
+                    break;
+
+                    case "c":
+                    result= result + " 16:4";
+                     break;
+
+                    case "ć":
+                    result= result + " 20:4";
+                    break;
+
+                    case "d":
+                     result= result + " 24:4";
+                     break;
+
+                     case "e":
+                     result= result + " 28:4";  //" 2x2-3";
+                    break;
+
+                   case "ę":
+                   result= result + " 32:4";
+                       break;
+
+                       case "f":
+                       result= result + " 36:4";
+                           break;
+
+                   case "g":
+                   result= result + " 40:4";
+                   break;
+
+                    /****************   11 *******************/
+                  case "h":
+                  result= result + " 4:4+10";
+                  break
+
+                  case "i":
+                result= result + " 8:4+10";
+                  break;
+
+                  case "j":
+                  result= result + " 12:4+10";
+                  break;
+
+                  case "k":
+                  result= result + " 16:4+10";
+                  break;
+
+                  case "l":
+                    result= result + " 20:4+10";
+                  break;
+
+                  case "ł":
+                    result= result + " 24:4+10";
+                  break;
+
+
+                  case "m":
+                  result= result + " 28:4+10";
+                  break;
+
+
+                  case "n":
+                  result= result + " 32:4+10";
+                  break;
+
+
+                  case "ń":
+                  result= result + " 36:4+10";
+                  break;
+
+                  case "o":
+                result= result + " 40:4+10";
+                  break;
+
+                  /****************   21   ***********/
+                case "ó":
+                 result= result + " 4:4+20";
+                break;
+
+                case "p":
+                result= result + " 8:4+20";
+                break;
+
+                case "q":
+                result= result + " 12:4+20";
+                break;
+
+
+                case "r":
+                result= result + " 16:4+20";
+                break;
+
+
+                case "s":
+                result= result + " 20:4+20";
+                break;
+
+                case "ś":
+                result= result + " 24:4+20";
+                break;
+
+
+                case "t":
+                result= result + " 28:4+20";
+                break;
+
+                case "u":
+                result= result + " 32:4+20";
+                break;
+
+
+                case "v":
+                result= result + " 36:4+20";
+                break;
+
+                case "w":
+                result= result + " 40:4+20";
+                break;
+                  /*****************************  31 **************************/
+
+                case "x":
+                result= result + " 4:4+30";
+                break;
+
+                case "y":
+                result= result + " 8:4+30";
+                break;
+
+
+                case "z":
+                result= result + " 12:4+30";
+                break;
+
+                case "ź":
+                result= result + " 16:4+30";
+                break;
+
+                case "ż":
+                result= result + " 20:4+30";
+                break;
+
+                     default:
+
+                }
+
+
+             }
+
+            document.getElementById("text2").value = result;
+}
+
+
+/* ------------  division6 -------------------------------- */
+function division3(){
+		var valuex = document.getElementById("text1").value;
+		//document.getElementById("text1").value = eval(x);
+
+        var    length = valuex.length;
+        var result ="";
+
+
+            for (i = 0; i < length; i++)
+            {
+
+                switch (valuex[i]) {
+                  case " ":
+                    result= result + "  ===  ";
+                    break;
+
+                    case "a":
+                      result= result + " 3:3";
+                    break;
+
+                    case "ą":
+                    result= result + " 6:3";  //" 2x2-3";
+                    break;
+
+                    case "b":
+                    result= result + " 9:3";
+                    break;
+
+                    case "c":
+                    result= result + " 12:3";
+                     break;
+
+                    case "ć":
+                    result= result + " 15:3";
+                    break;
+
+                    case "d":
+                     result= result + " 18:3";
+                     break;
+
+                     case "e":
+                     result= result + " 21:3";  //" 2x2-3";
+                    break;
+
+                   case "ę":
+                   result= result + " 24:3";
+                       break;
+
+                       case "f":
+                       result= result + " 27:3";
+                           break;
+
+                   case "g":
+                   result= result + " 30:3";
+                   break;
+
+                    /****************   11 *******************/
+                  case "h":
+                  result= result + " 3:3+10";
+                  break;
+
+                  case "i":
+                result= result + " 6:3+10";
+                  break;
+
+                  case "j":
+                  result= result + " 9:3+10";
+                  break;
+
+                  case "k":
+                  result= result + " 12:3+10";
+                  break;
+
+                  case "l":
+                    result= result + " 15:3+10";
+                  break;
+
+                  case "ł":
+                    result= result + " 18:3+10";
+                  break;
+
+
+                  case "m":
+                  result= result + " 21:3+10";
+                  break;
+
+
+                  case "n":
+                  result= result + " 24:3+10";
+                  break;
+
+
+                  case "ń":
+                  result= result + " 27:9+10";
+                  break;
+
+                  case "o":
+                result= result + " 30:3+10";
+                  break;
+
+                  /****************   21   ***********/
+                case "ó":
+                 result= result + " 3:3+20";
+                break;
+
+                case "p":
+                result= result + " 6:3+20";
+                break;
+
+                case "q":
+                result= result + " 9:3+20";
+                break;
+
+
+                case "r":
+                result= result + " 12:3+20";
+                break;
+
+
+                case "s":
+                result= result + " 15:3+20";
+                break;
+
+                case "ś":
+                result= result + " 18:3+20";
+                break;
+
+
+                case "t":
+                result= result + " 21:3+20";
+                break;
+
+                case "u":
+                result= result + " 24:3+20";
+                break;
+
+
+                case "v":
+                result= result + " 27:3+20";
+                break;
+
+                case "w":
+                result= result + " 30:3+20";
+                break;
+                  /*****************************  31 **************************/
+
+                case "x":
+                result= result + " 3:3+30";
+                break;
+
+                case "y":
+                result= result + " 6:3+30";
+                break;
+
+
+                case "z":
+                result= result + " 9:3+30";
+                break;
+
+                case "ź":
+                result= result + " 12:3+30";
+                break;
+
+                case "ż":
+                result= result + " 15:3+30";
+                break;
+
+                     default:
+
+                }
+
+
+             }
+
+            document.getElementById("text2").value = result;
+}
+
+/* ------------  division6 -------------------------------- */
+function division6(){
+		var valuex = document.getElementById("text1").value;
+		//document.getElementById("text1").value = eval(x);
+
+        var    length = valuex.length;
+        var result ="";
+
+
+            for (i = 0; i < length; i++)
+            {
+
+                switch (valuex[i]) {
+                  case " ":
+                    result= result + "  ===  ";
+                    break;
+
+                    case "a":
+                      result= result + " 6:6";
+                    break;
+
+                    case "ą":
+                    result= result + " 12:6";  //" 2x2-3";
+                    break;
+
+                    case "b":
+                    result= result + " 18:6";
+                    break;
+
+                    case "c":
+                    result= result + " 24:6";
+                     break;
+
+                    case "ć":
+                    result= result + " 30:6";
+                    break;
+
+                    case "d":
+                     result= result + " 36:6";
+                     break;
+
+                     case "e":
+                     result= result + " 42:6";  //" 2x2-3";
+                    break;
+
+                   case "ę":
+                   result= result + " 48:6";
+                       break;
+
+                       case "f":
+                       result= result + " 54:6";
+                           break;
+
+                   case "g":
+                   result= result + " 60:6";
+                   break;
+
+                    /****************   11 *******************/
+                  case "h":
+                  result= result + " 6:6+10";
+                  break;
+
+                  case "i":
+                result= result + " 12:6+10";
+                  break;
+
+                  case "j":
+                  result= result + " 18:6+10";
+                  break;
+
+                  case "k":
+                  result= result + " 24:6+10";
+                  break;
+
+                  case "l":
+                    result= result + " 30:6+10";
+                  break;
+
+                  case "ł":
+                    result= result + " 36:6+10";
+                  break;
+
+
+                  case "m":
+                  result= result + " 42:6+10";
+                  break;
+
+
+                  case "n":
+                  result= result + " 48:6+10";
+                  break;
+
+
+                  case "ń":
+                  result= result + " 54:6+10";
+                  break;
+
+                  case "o":
+                result= result + " 60:6+10";
+                  break;
+
+                  /****************   21   ***********/
+                case "ó":
+                 result= result + " 6:6+20";
+                break;
+
+                case "p":
+                result= result + " 12:6+20";
+                break;
+
+                case "q":
+                result= result + " 18:6+20";
+                break;
+
+
+                case "r":
+                result= result + " 24:6+20";
+                break;
+
+
+                case "s":
+                result= result + " 30:6+20";
+                break;
+
+                case "ś":
+                result= result + " 36:6+20";
+                break;
+
+
+                case "t":
+                result= result + " 42:6+20";
+                break;
+
+                case "u":
+                result= result + " 48:6+20";
+                break;
+
+
+                case "v":
+                result= result + " 54:6+20";
+                break;
+
+                case "w":
+                result= result + " 60:6+20";
+                break;
+                  /*****************************  31 **************************/
+
+                case "x":
+                result= result + " 6:6+30";
+                break;
+
+                case "y":
+                result= result + " 12:6+30";
+                break;
+
+
+                case "z":
+                result= result + " 18:6+30";
+                break;
+
+                case "ź":
+                result= result + " 24:6+30";
+                break;
+
+                case "ż":
+                result= result + " 30:6+30";
+                break;
+
+                     default:
+
+                }
+
+
+             }
+
+            document.getElementById("text2").value = result;
+}
+/*88888888888  */
+function multiplication8(){
+		var valuex = document.getElementById("text1").value;
+
+        var    length = valuex.length;
+        var result ="";
+
+
+            for (i = 0; i < length; i++)
+            {
+
+                switch (valuex[i]) {
+                  case " ":
+                    result= result + "  ===  ";
+                    break;
+
+                    case "a":
+                      result= result + " 8x2-15";
+                    break;
+
+                    case "ą":
+                    result= result + " 8x2-14";  //" 2x2-3";
+                    break;
+
+                    case "b":
+                    result= result + " 8x2-13";
+                    break;
+
+                    case "c":
+                    result= result + " 8x2-12";
+                     break;
+
+                    case "ć":
+                    result= result + " 8x2-11";
+                    break;
+
+                    case "d":
+                     result= result + " 8x3-18";
+                     break;
+
+                     case "e":
+                     result= result + " 8x3-17";  //" 2x2-3";
+                    break;
+
+                   case "ę":
+                   result= result + " 8x3-16";
+                       break;
+
+                       case "f":
+                       result= result + " 8x3-15";
+                           break;
+
+                   case "g":
+                   result= result + " 8x3-14";
+                   break;
+
+
+                  case "h":
+                  result= result + " 8x3-13";
+                  break;
+
+                  case "i":
+                result= result + " 8x3-12";
+                  break;
+
+                  case "j":
+                  result= result + " 8x3-11";
+                  break;
+
+                  case "k":
+                  result= result + " 8x3-10";
+                  break;
+
+                  case "l":
+                    result= result + " 8x3-9";
+                  break;
+
+                  case "ł":
+                    result= result + " 8x3-8";
+                  break;
+
+
+                  case "m":
+                  result= result + " 8x3-7";
+                  break;
+
+
+                  case "n":
+                  result= result + " 8x3-6";
+                  break;
+
+
+                  case "ń":
+                  result= result + " 8x3-5";
+                  break;
+
+                  case "o":
+                result= result + " 8x3-4";
+                  break;
+
+
+                case "ó":
+                 result= result + " 8x3-3";
+                break;
+
+                case "p":
+                result= result + " 8x3-2";
+                break;
+
+                case "q":
+                result= result + " 8x3-1";
+                break;
+
+
+                case "r":
+                result= result + " 8x4-8";
+                break;
+
+
+                case "s":
+                result= result + " 8x4-7";
+                break;
+
+                case "ś":
+                result= result + " 8x4-6";
+                break;
+
+
+                case "t":
+                result= result + " 8x4-5";
+                break;
+
+                case "u":
+                result= result + " 8x5-12";
+                break;
+
+
+                case "v":
+                result= result + " 8x5-11";
+                break;
+
+                case "w":
+                result= result + " 8x5-10";
+                break;
+
+
+                case "x":
+                result= result + " 8x6-17";
+                break;
+
+                case "y":
+                result= result + " 8x6-16";
+                break;
+
+
+                case "z":
+                result= result + " 8x7-23";   //33
+                break;
+
+                case "ź":
+                result= result + " 8x7-22";
+                break;
+
+                case "ż":
+                result= result + " 8x7-21";  //35
+                break;
+
+                     default:
+
+                }
+
+
+             }
+
+            document.getElementById("text2").value = result;
+}
+
+
+
+
+
+
+
+/*   ----------    77777 --------------------------------- */
+function multiplication7(){
+		var valuex = document.getElementById("text1").value;
+
+        var    length = valuex.length;
+        var result ="";
+
+
+            for (i = 0; i < length; i++)
+            {
+
+                switch (valuex[i]) {
+                  case " ":
+                    result= result + "  ===  ";
+                    break;
+
+                    case "a":
+                      result= result + " 7x2-13";
+                    break;
+
+                    case "ą":
+                    result= result + " 7x2-12";  //" 2x2-3";
+                    break;
+
+                    case "b":
+                    result= result + " 7x2-11";
+                    break;
+
+                    case "c":
+                    result= result + " 7x2-10";
+                     break;
+
+                    case "ć":
+                    result= result + " 7x2-9";
+                    break;
+
+                    case "d":
+                     result= result + " 7x3-15";
+                     break;
+
+                     case "e":
+                     result= result + " 7x3-14";  //" 2x2-3";
+                    break;
+
+                   case "ę":
+                   result= result + " 7x3-13";
+                       break;
+
+                       case "f":
+                       result= result + " 7x3-12";
+                           break;
+
+                   case "g":
+                   result= result + " 7x3-11";
+                   break;
+
+
+                  case "h":
+                  result= result + " 7x3-10";
+                  break;
+
+                  case "i":
+                result= result + " 7x3-9";
+                  break;
+
+                  case "j":
+                  result= result + " 7x3-8";
+                  break;
+
+                  case "k":
+                  result= result + " 7x3-7";
+                  break;
+
+                  case "l":
+                    result= result + " 7x3-6";
+                  break;
+
+                  case "ł":
+                    result= result + " 7x3-5";
+                  break;
+
+
+                  case "m":
+                  result= result + " 7x3-4";
+                  break;
+
+
+                  case "n":
+                  result= result + " 7x3-3";
+                  break;
+
+
+                  case "ń":
+                  result= result + " 7x3-2";
+                  break;
+
+                  case "o":
+                result= result + " 7x3-1";
+                  break;
+
+
+                case "ó":
+                 result= result + " 7x3";
+                break;
+
+                case "p":
+                result= result + " 7x3+1";
+                break;
+
+                case "q":
+                result= result + " 7x3+2";
+                break;
+
+
+                case "r":
+                result= result + " 7x4-4";
+                break;
+
+
+                case "s":
+                result= result + " 7x4-3";
+                break;
+
+                case "ś":
+                result= result + " 7x4-2";
+                break;
+
+
+                case "t":
+                result= result + " 7x4-1";
+                break;
+
+                case "u":
+                result= result + " 7x5-7";
+                break;
+
+
+                case "v":
+                result= result + " 7x5-6";
+                break;
+
+                case "w":
+                result= result + " 7x6-12";
+                break;
+
+
+                case "x":
+                result= result + " 7x6-11";
+                break;
+
+                case "y":
+                result= result + " 7x6-10";
+                break;
+
+
+                case "z":
+                result= result + " 7x7-16";   //33
+                break;
+
+                case "ź":
+                result= result + " 7x7-16";
+                break;
+
+                case "ż":
+                result= result + " 7x8-21";  //35
+                break;
+
+                     default:
+
+                }
+
+
+             }
+
+            document.getElementById("text2").value = result;
+}
+
+
+
+
+function Odejmowanie()
+{
+ document.getElementById("myH3").style.visibility = "hidden";
+ document.getElementById("radio2").style.visibility = "hidden";
+ document.getElementById("radio3").style.visibility = "hidden";
+ document.getElementById("radio4").style.visibility = "hidden";
+ document.getElementById("radio5").style.visibility = "hidden";
+ document.getElementById("radio6").style.visibility = "hidden";
+ document.getElementById("radio7").style.visibility = "hidden";
+
+ document.getElementById("radio8").style.visibility = "hidden";
+ document.getElementById("item2").style.visibility = "hidden";
+ document.getElementById("item3").style.visibility = "hidden";
+ document.getElementById("item4").style.visibility = "hidden";
+ document.getElementById("item5").style.visibility = "hidden";
+ document.getElementById("item6").style.visibility = "hidden";
+ document.getElementById("item7").style.visibility = "hidden";
+  document.getElementById("item8").style.visibility = "hidden";
+}
+
+function Mnozenie()
+{
+ document.getElementById("myH3").style.visibility = "visible";
+  document.getElementById("radio2").style.visibility = "visible";
+ document.getElementById("radio3").style.visibility = "visible";
+ document.getElementById("radio4").style.visibility = "visible";
+ document.getElementById("radio5").style.visibility = "visible";
+ document.getElementById("radio6").style.visibility = "visible";
+ document.getElementById("radio7").style.visibility = "visible";
+ document.getElementById("radio8").style.visibility = "visible";
+ document.getElementById("item2").style.visibility = "visible";
+ document.getElementById("item3").style.visibility = "visible";
+ document.getElementById("item4").style.visibility = "visible";
+ document.getElementById("item5").style.visibility = "visible";
+ document.getElementById("item6").style.visibility = "visible";
+ document.getElementById("item7").style.visibility = "visible";
+ document.getElementById("item8").style.visibility = "visible";
+}
+
+
+function Dzielenie()
+{
+
+   document.getElementById("radio2").style.visibility = "hidden";
+   document.getElementById("radio5").style.visibility = "hidden";
+   document.getElementById("radio7").style.visibility = "hidden";
+
+   document.getElementById("radio8").style.visibility = "hidden";
+    document.getElementById("item2").style.visibility = "hidden";
+    document.getElementById("item5").style.visibility = "hidden";
+   document.getElementById("item7").style.visibility = "hidden";
+  document.getElementById("item8").style.visibility = "hidden";
+   document.getElementById("radio6").style.visibility = "visible";
+ document.getElementById("item6").style.visibility = "visible";
+ document.getElementById("radio4").style.visibility = "visible";
+ document.getElementById("item4").style.visibility = "visible";
+ document.getElementById("radio3").style.visibility = "visible";
+ document.getElementById("item3").style.visibility = "visible";
+
+}
+
+</script>
+<tr>
+</tr>
+</head>
+<body>
+
+ <div id="fb-root"></div>
+ <script>(function(d, s, id) {
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) return;
+   js = d.createElement(s); js.id = id;
+   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));</script>
+
+
+<center>
+
+ <h1>Maszyna do kodowania</h1>
+ <tr >
+    <h3>Tutaj pisz zdanie do zakodowania :</h3>
+       <input type="text" id="text1" placeholder="pisz..." />
+ </tr>
+
+ <tr>
+   <h3>Rodzaj kodowania :</h3>
+   <label class="container">Odejmowanie
+     <input type="radio" name="radio_type" id ="radioOdejmowanie"   onClick="Odejmowanie()">
+     <span class="checkmark"></span>
+   </label>
+   <label class="container">Mnozenie
+     <input type="radio" checked="checked" name="radio_type" id ="radioMnozenie"  onClick="Mnozenie()">
+     <span class="checkmark"></span>
+   </label>
+   <label class="dzielenie">Dzielenie
+     <input type="radio"  name="radio_type" id ="radioDzielenie"  onClick="Dzielenie()">
+     <span class="checkmark"></span>
+   </label>
+
+</tr>
+
+
+ <tr>
+   <h3 id ="myH3">Tabliczka do wyboru :</h3>
+   <label class="container" id ="item2">2
+     <input type="radio"  name="radio" id = "radio2">
+     <span class="checkmark"></span>
+   </label><label class="container" id ="item3">3
+     <input type="radio"  name="radio" id = "radio3">
+     <span class="checkmark"></span>
+   </label>
+   <label class="container"  id ="item4">4
+     <input type="radio" name="radio" id ="radio4">
+     <span class="checkmark"></span>
+   </label>
+   <label class="container"  id ="item5">5
+     <input type="radio" name="radio"  id="radio5">
+     <span class="checkmark"></span>
+   </label>
+   <label class="container"  id ="item6">6
+     <input type="radio" checked="checked" name="radio" id = "radio6">
+     <span class="checkmark"></span>
+   </label>
+   <label class="container"  id ="item7">7
+     <input type="radio" name="radio" id = "radio7">
+     <span class="checkmark"></span>
+   </label>
+   <label class="container"  id ="item8">8
+     <input type="radio" name="radio" id = "radio8">
+     <span class="checkmark"></span>
+   </label>
+</tr>
+
+<tr>
+ <br>  <br>  <br>
+ <td> <button type="button" style="height:48px;"  onClick="operation()" >Kliknij tutaj i produkuj kod</button></td>
+</tr>
+
+<br>  <br>
+ <tr>
+      <h3>A tutaj otrzymasz kod :</h3>
+       <textarea type="text" id="text2" disabled placeholder="0..." rows="5" ></textarea> <br>
+
+ </tr>
+
+
+
+
+<tr>
+ <h3>na bazie takiego alfabetu :</h3>
+
+ <img id="alphabet" src="alfabet.jfif">
+</tr>
+<br>
+<tr>
+ <h3>nagranie odkodowania przez dziecka :</h3>
+
+<a href="https://www.youtube.com/watch?v=YJ89Hw3xFDw&feature=youtu.be">nagranie odkodowania przez dziecka</a>
+</tr>
+
+<tr>
+  <h3>kartkoweczka zielona zabeczka (5 dodatkowe testy):</h3>
+
+  <a href="Slide2.JPG"> c</a>
+  <a href="Slide3.JPG"> d</a>
+  <a href="Slide4.JPG"> e</a>
+  <a href="Slide5.JPG"> f</a>
+  <a href="Slide6.JPG"> g</a>
+  </tr>
+
+
+
+</center>
+<div class="fb-comments" data-href="http://zemathcodes.epizy.com//MathCode.html" data-width="500px" data-numposts="5"></div>
+<div class="fb-like" data-href="http://zemathcodes.epizy.com//MathCode.html" data-width="500px" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+</html>
