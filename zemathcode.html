@@ -70,11 +70,203 @@ function operation()
          {division4();}
    }
 
+  if( document.getElementById("radioDzieleniezesetkimi").checked === true)
+   {
 
+
+    if( document.getElementById("radio2").checked === true)
+    {	divisionwithdecimals(2);}
+    if( document.getElementById("radio3").checked === true)
+    {	divisionwithdecimals(3);}
+    if( document.getElementById("radio4").checked === true)
+    {	divisionwithdecimals(4);}
+    if( document.getElementById("radio5").checked === true)
+    {	divisionwithdecimals(5);}
+    if( document.getElementById("radio6").checked === true)
+    {	divisionwithdecimals(6);}
+    if( document.getElementById("radio7").checked === true)
+    {	divisionwithdecimals(7);}
+    if( document.getElementById("radio8").checked === true)
+    {	divisionwithdecimals(8);}
+   }
+
+	   
   if( document.getElementById("radioOdejmowanie").checked === true)
   {
     substraction();
   }
+
+}
+
+function divisionwithdecimals(divisor)
+{
+	var valuex = document.getElementById("text1").value.toLowerCase();
+    var    length = valuex.length;
+	var result ="";
+	var addSeparatorAfter=" == ";
+	for (i = 0; i < length; i=i+2)
+    {
+		addSeparatorAfter=" ";
+	
+	
+		intValueX = translatetoNumber(valuex[i]);
+		intValueY = translatetoNumber(valuex[i+1]);
+	
+		while( intValueX== -1)
+		{
+			if( i+1 < length)
+			{ 
+				result = result + " == ";
+				i = i+1;
+				intValueX = translatetoNumber(valuex[i]);
+				intValueY = translatetoNumber(valuex[i+1]);
+			}
+			else
+			{
+				intValueX=0;
+				intValueY=0;
+				break;
+			}
+		
+		}
+		
+		if ( intValueY== -1)
+		{
+			addSeparatorAfter= " == ";
+			intValueY =0;
+		
+		}
+		
+		
+	
+	
+		var dividend = divisor * Number(intValueX  + "." +  intValueY);
+		if (dividend != 0.0)  // we do nothing if we finish a line with an empty space
+		{
+			result = result + " " + dividend.toFixed(2) + ":" + divisor + addSeparatorAfter;   
+		}
+	}
+
+    document.getElementById("text2").value = result;
+
+}
+function translatetoNumber (letter)
+{
+ var returnValue ="";
+        switch (letter) {
+           case " ":
+             returnValue = -1;
+             break;
+
+           case "a":
+             returnValue = 1;
+             break;
+
+           case "ą":
+             returnValue = 2;
+             break;
+
+           case "b":
+             returnValue =3;
+             break;
+           case "c":
+             returnValue =4;
+             break;
+           case "ć":
+             returnValue =5;
+             break;
+           case "d":
+             returnValue =6;
+             break;
+           case "e":
+             returnValue =7;
+             break;
+           case "ę":
+             returnValue =8;
+             break;
+           case "f":
+             returnValue =9;
+             break;
+           case "g":
+             returnValue =10;
+             break;
+           case "h":
+             returnValue =11;
+             break;
+           case "i":
+             returnValue =12;
+             break;
+           case "j":
+             returnValue =13;
+             break;
+           case "k":
+             returnValue =14;
+             break;
+           case "l":
+             returnValue =15;
+             break;
+           case "ł":
+             returnValue =16;
+             break;
+           case "m":
+             returnValue =17;
+             break;
+           case "n":
+             returnValue =18;
+             break;
+           case "ń":
+             returnValue =19;
+             break;
+           case "o":
+             returnValue =20;
+             break;
+           case "ó":
+             returnValue =21;
+             break;
+           case "p":
+             returnValue =22;
+             break;
+           case "q":
+             returnValue =23;
+             break;
+           case "r":
+             returnValue =24;
+             break;
+           case "s":
+             returnValue =25;
+             break;
+           case "ś":
+             returnValue =26;
+             break;
+           case "t":
+             returnValue =27;
+             break;
+           case "u":
+             returnValue =28;
+             break;
+           case "v":
+             returnValue =29;
+             break;
+           case "w":
+             returnValue =30;
+             break;
+           case "x":
+             returnValue =31;
+             break;
+           case "y":
+             returnValue =32;
+             break;
+           case "z":
+             returnValue =33;
+             break;
+           case "ź":
+             returnValue =34;
+             break;
+           case "ż	":
+             returnValue =35;
+             break;
+         }
+	return returnValue;
 
 }
 
@@ -2034,6 +2226,28 @@ function Dzielenie()
 
 }
 
+
+
+
+function Dzieleniezesetkimi()
+{
+ document.getElementById("myH3").style.visibility = "visible";
+  document.getElementById("radio2").style.visibility = "visible";
+ document.getElementById("radio3").style.visibility = "visible";
+ document.getElementById("radio4").style.visibility = "visible";
+ document.getElementById("radio5").style.visibility = "visible";
+ document.getElementById("radio6").style.visibility = "visible";
+ document.getElementById("radio7").style.visibility = "visible";
+ document.getElementById("radio8").style.visibility = "visible";
+ document.getElementById("item2").style.visibility = "visible";
+ document.getElementById("item3").style.visibility = "visible";
+ document.getElementById("item4").style.visibility = "visible";
+ document.getElementById("item5").style.visibility = "visible";
+ document.getElementById("item6").style.visibility = "visible";
+ document.getElementById("item7").style.visibility = "visible";
+ document.getElementById("item8").style.visibility = "visible";
+}
+
 </script>
 <tr>
 </tr>
@@ -2070,6 +2284,10 @@ function Dzielenie()
    </label>
    <label class="dzielenie">Dzielenie
      <input type="radio"  name="radio_type" id ="radioDzielenie"  onClick="Dzielenie()">
+     <span class="checkmark"></span>
+	 
+   <label class="container">Dzielenie ze setkimi dziesi dziesiętnymi
+     <input type="radio"  name="radio_type" id ="radioDzieleniezesetkimi"  onClick="Dzieleniezesetkimi()">
      <span class="checkmark"></span>
    </label>
 
@@ -2134,15 +2352,7 @@ function Dzielenie()
 <a href="https://www.youtube.com/watch?v=YJ89Hw3xFDw&feature=youtu.be">nagranie odkodowania przez dziecka</a>
 </tr>
 
-<tr>
-  <h3>kartkoweczka zielona zabeczka (5 dodatkowe testy):</h3>
 
-  <a href="Slide2.JPG"> c</a>
-  <a href="Slide3.JPG"> d</a>
-  <a href="Slide4.JPG"> e</a>
-  <a href="Slide5.JPG"> f</a>
-  <a href="Slide6.JPG"> g</a>
-  </tr>
 
 
 
